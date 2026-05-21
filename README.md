@@ -18,4 +18,13 @@ Measures:
 - Quantity
 
 #Step 3: Data Exploration 
+This step involves the following analysis:
+- Database and Dimensions exploration
+- Date exploration
+- Measure exploration
+- Magnitude analysis
+- Ranking analysis
 
+#Step 4: Advanced Data Analytis
+This section includes:
+- Changes over time analysis
