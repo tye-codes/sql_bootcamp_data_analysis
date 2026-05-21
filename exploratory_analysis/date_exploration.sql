@@ -1,7 +1,3 @@
-/* 
-SELECT DISTINCT is useful for giving a high-level overview of the dimensions available in the data.
-*/
-
 /*
 DATEDIFF is a useful tool for finding the difference between dates during exploratory data analysis. 
 */
