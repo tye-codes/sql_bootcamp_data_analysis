@@ -41,6 +41,9 @@ ON fs.customer_key = dc.customer_key
 ),
 
 customer_aggregation AS(
+/* -------------------------------------------------------------
+2) Aggregation Query: Aggregates key values.
+------------------------------------------------------------- */
 SELECT
 	customer_key,
 	customer_number,
@@ -59,6 +62,9 @@ GROUP BY
 	customer_name,
 	age)
 
+/* -------------------------------------------------------------
+3) Final Query: Collects all customer information into one table.
+------------------------------------------------------------- */
 SELECT 
 	customer_key,
 	customer_number,
