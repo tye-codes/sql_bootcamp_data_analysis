@@ -1,41 +1,65 @@
-# SQL_bootcamp_data_analysis
------------------------------------------------------------------
-Udemy SQL bootcamp data_analysis documentation. This repository was created to demonstrate a capability to self-learn SQL query language. SQL Server Management Studio was used for this data analysis.
+# SQL Data Analysis — Customer & Product Reporting
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Steps 1 through 4 are compiled together in step 5 to generate reports. All skills are displayed in the advanced_data_analytics_projecct/customer_report.sql
-# and advanced_data_analytics_projecct/customer_report.sql files. 
--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Exploratory and advanced SQL analytics project using SQL Server Management Studio.
+Covers the full analytical workflow from data profiling and classification through
+to structured customer and product reports.
 
-# Step 1:
-Create a gold schema in a new database. Import the flat files from resources into the schema. Files are also provided as .bak file type to restore from backup if flat files do not work. 
+---
 
-# Step 2:
-Consider the data categorised as either a measure or a dimension. A dimension will be any value which is not numeric or does not make sense to aggregate. A measure is a numeric value which makes sense to aggregate. 
-Dimensions: 
-- Category
-- ID
-- Birthdate
-- Product
-Measures:
-- Age
-- Sales
-- Quantity
+## Analytical Techniques
 
-# Step 3: Data Exploration 
-This step involves the following analysis:
-- Database and Dimensions exploration
-- Date exploration
-- Measure exploration
-- Magnitude analysis
-- Ranking analysis
+| Technique | File |
+|-----------|------|
+| Time-series trend analysis | `change_over_time.sql` |
+| Cumulative running totals | `cumulative_analysis.sql` |
+| Customer and product segmentation | `data_segmentation.sql` |
+| Part-to-whole contribution analysis | `part_to_whole.sql` |
+| Performance vs. benchmark | `performance_analysis.sql` |
 
-# Step 4: Advanced Data Analytis
-This section includes:
-- Changes over time analysis
-- Cumulative analysis
-- Performance analysis
-- Part to whole Analysis
-- Data Segmentation
+Exploratory analysis covers dimension and measure profiling, date range analysis,
+magnitude rankings, and database structure exploration.
 
-# Step 5: Build Customer and Product Reports. 
+Final reports compile all analytical layers into structured deliverables:
+- `customer_report.sql` — customer behaviour, segmentation, and sales contribution
+- `product_report.sql` — product performance, category trends, and ranking analysis
+
+---
+
+## How to Run
+
+**Prerequisites**: SQL Server, SQL Server Management Studio (SSMS)
+
+**Option 1 — restore from backup:**
+1. Restore `resources/DataWarehouseAnalytics.bak` in SSMS
+2. Open and run any script in `exploratory_analysis/` or `advanced_data_analytics_project/`
+
+**Option 2 — import from flat files:**
+1. Create a new database in SSMS
+2. Import `dim_customers.csv`, `dim_products.csv`, and `fact_sales.csv`
+   from `resources/flat-files/`
+3. Run scripts in order: exploratory analysis → foundational analytics → reports
+
+---
+
+## Key SQL Techniques
+
+- Window functions — `ROW_NUMBER`, `RANK`, `LAG`/`LEAD`, running totals
+- Time-series aggregations and year-over-year comparisons
+- Customer and product segmentation with CASE logic
+- Part-to-whole analysis using subqueries
+- Performance benchmarking against period averages
+- CTEs for multi-step analytical logic
+
+---
+
+## Tech Stack
+
+- **Language**: SQL
+- **Environment**: SQL Server Management Studio (SSMS)
+- **Source data**: ~5MB across customer, product, and sales flat files
+
+---
+
+## License
+
+MIT — free to use with attribution.
